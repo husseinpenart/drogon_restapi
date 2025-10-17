@@ -21,7 +21,7 @@ void productsControllers::createProducts(const HttpRequestPtr &req,
         callback(resp);
         return;
     }
-    auto client = app().getDbClient();
+    auto client = app().getDbClient("shopapi");
     if (!client) {
         cout << "Database client not found!";
     }
