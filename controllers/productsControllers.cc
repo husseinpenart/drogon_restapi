@@ -29,7 +29,7 @@ namespace {
 
     // Validate file extension
     bool isValidImageExtension(const std::string &filename) {
-        static const std::vector<std::string> allowedExtensions = {".jpg", ".jpeg", ".png", ".gif"};
+        static const std::vector<std::string> allowedExtensions = {".jpg", ".jpeg", ".png", ".gif" , ".webp"};
         std::string ext = std::filesystem::path(filename).extension().string();
         std::transform(ext.begin(), ext.end(), ext.begin(), ::tolower);
         return std::find(allowedExtensions.begin(), allowedExtensions.end(), ext) != allowedExtensions.end();
@@ -96,7 +96,7 @@ namespace {
         LOG_DEBUG << "Uploaded file: " << originalFilename;
 
         if (!isValidImageExtension(originalFilename)) {
-            errorMsg = "Invalid image file type. Allowed: jpg, jpeg, png, gif";
+            errorMsg = "Invalid image file type. Allowed: jpg, jpeg, png, gif , webp";
             return std::nullopt;
         }
 
