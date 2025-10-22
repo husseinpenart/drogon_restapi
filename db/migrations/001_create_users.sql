@@ -1,8 +1,8 @@
-CREATE TABLE users
+CREATE TABLE public.UserCase
 (
-    id       INT PRIMARY KEY NOT NULL,
-    name     TEXT            NOT NULL,
-    email    VARCHAR(100)    NOT NULL,
-    username VARCHAR(100),
-    password VARCHAR(255)
+    id       uuid PRIMARY KEY,
+    name     TEXT         NOT NULL,
+    email    VARCHAR(100) NOT NULL,
+    username VARCHAR(100) NOT NULL,
+    password VARCHAR(255) NOT NULL
 )

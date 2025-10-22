@@ -1,7 +1,9 @@
 cmake_minimum_required(VERSION 3.5)
 project(webApi_test CXX)
 
-add_executable(${PROJECT_NAME} test_main.cc)
+add_executable(${PROJECT_NAME} test_main.cc
+        ../tools/crypto_utils.h
+)
 
 # ##############################################################################
 # If you include the drogon source code locally in your project, use this method
