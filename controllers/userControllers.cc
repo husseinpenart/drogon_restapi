@@ -5,7 +5,7 @@
 #include <trantor/utils/Logger.h>
 #include "Usercase.h"
 #include <jwt-cpp/jwt.h>
-
+// register
 void userControllers::Register(const HttpRequestPtr &req, std::function<void(const HttpResponsePtr &)> &&callback) {
     auto json = req->getJsonObject();
     if (!json) {
