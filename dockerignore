@@ -1,0 +1,23 @@
+# Ignore Git files
+.git
+.gitignore
+
+# Ignore CLion/IDE artifacts
+.idea
+cmake-build-*
+
+# Ignore build outputs
+build/
+bin/
+lib/
+
+# Ignore logs and temp files
+*.log
+*.tmp
+tmp/
+
+# Ignore dependencies if vendored (adjust if you have them)
+deps/
+vcpkg/
+conan/
+cmake-build-debug/
